@@ -1,0 +1,57 @@
+/* pages/my/comment/index.wxss */
+.list {
+  height: 100%;
+}
+.list .tips {
+    font-size: 28rpx;
+    text-align: center;
+    padding: 50rpx;
+    color: #ccc;
+}
+.list .tips image,text {
+      vertical-align: middle;
+}
+.list .tips image {
+      width: 20rpx;
+      height: 20rpx;
+      margin-right: 20rpx;
+}
+.list .item {
+    display: flex;
+    border-bottom: 1rpx solid #eee;
+    cursor: pointer; 
+    margin: 10px;
+}
+.list .item .poster {
+      width: 80rpx;
+      height: 80rpx;
+      margin-right: 10rpx;
+}
+
+.list .item .metas {
+      flex: 1;
+      margin-right:10px; 
+}
+.list .item .metas .title,.sub-title {
+        display: block;
+        margin-bottom: 15rpx;
+}
+.list .item .metas  .title {
+        font-size: 32rpx;
+        color: #c0c0c0;
+}
+.list .item .metas  .sub-title {
+        font-size: 32rpx;
+        color: #000000;
+}
+.list .item .metas .artists {
+        font-size: 24rpx;
+        color: #999;
+        margin-left: 190px;
+}
+
+.list .item .metas .artists image{
+        width: 20px;
+        height: 20px;
+        margin-left: 20px;
+}

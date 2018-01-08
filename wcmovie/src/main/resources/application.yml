@@ -1,0 +1,18 @@
+#豆瓣api
+movie:
+  baseUrl: https://api.douban.com
+  showing: /v2/movie/in_theaters
+  preshow: /v2/movie/coming_soon
+  top250: /v2/movie/top250
+  weekly: /v2/movie/weekly
+  usmovie: /v2/movie/us_box
+  newmovie: /v2/movie/new_movies
+  search: /v2/movie/search
+  movie: /v2/movie/subject/
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.jdbc.Driver
+      username: root
+      password: 2014dsl
+      url: jdbc:mysql://localhost:3306/training?useUnicode=true&characterEncoding=utf8

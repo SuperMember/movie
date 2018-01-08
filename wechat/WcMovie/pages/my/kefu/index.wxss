@@ -1,0 +1,5 @@
+/* pages/my/kefu/index.wxss */
+image{
+  width: 320px;
+  height: 320px;
+}

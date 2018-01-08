@@ -1,0 +1,57 @@
+.list {
+  height: 100%;
+}
+.list .tips {
+    font-size: 28px;
+    text-align: center;
+    padding: 50px;
+    color: #ccc;
+}
+.list .tips image,text {
+      vertical-align: middle;
+}
+.list .tips image {
+      width: 40px;
+      height: 40px;
+      margin-right: 20px;
+}
+.list .item {
+    display: flex;
+    padding: 20px 40px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+.list .item .poster {
+      width: 128px;
+      height: 168px;
+      margin-right: 20px;
+}
+.list .item .rating text {
+      display: inline-block;
+      width: 40px;
+      font-size: 28px;
+      font-weight: bold;
+      text-align: center;
+      background-color: rgba(247, 76, 49, .8);
+      color: #fff;
+      padding: 10px;
+      border-radius: 20px;
+}
+.list .item .meta {
+      flex: 1;
+}
+.list .item .meta .title,.sub-title {
+        display: block;
+        margin-bottom: 15px;
+}
+.list .item .meta  .title {
+        font-size: 32px;
+}
+.list .item .meta  .sub-title {
+        font-size: 22px;
+        color: #c0c0c0;
+}
+.list .item .meta .artists {
+        font-size: 24px;
+        color: #999;
+}

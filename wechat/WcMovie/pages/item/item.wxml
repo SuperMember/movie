@@ -1,0 +1,40 @@
+<view class="container">
+  <loading hidden="{{ !loading }}">加载中...</loading>
+  <image wx:if="{{ movie.images.large }}" class="background" src="{{ movie.images.large }}" mode="aspectFill" />
+  <block wx:if="{{ movie.title }}">
+    <view class="meta">
+      <image class="poster" src="{{ movie.images.large }}" mode="aspectFit" />
+      <text class="title">{{ movie.title }}({{ movie.year }})</text>
+      <text class="info">评分：{{ movie.rating.average }}</text>
+      <text class="info">导演：<block wx:for="{{ movie.directors }}" wx:key="id"> {{ item.name }} </block></text>
+      <text class="info">主演：<block wx:for="{{ movie.casts }}" wx:key="id"> {{ item.name }} </block></text>
+    </view>
+    <view class="summary">
+      <text class="label">摘要：</text>
+      <text class="content">{{ movie.summary }}</text>
+    </view>
+    <view class="comment">
+      <text class="label">我的神评</text>
+      <view class='list' wx:if="{{comments.length!=0}}">
+        <view class="item" wx:for="{{comments}}" wx:key="id">
+          <image class="poster" src="{{url}}" />
+          <view class="metas">
+            <text class="title">{{ item.username }}</text>
+            <text class="sub-title">{{ item.moviecontent }}</text>
+            <view class="artists">
+              <text>{{ item.created }}</text>
+              <image src='../../../images/icon_delete.png' bindtap='deleteBtn' data-id="{{item.id}}"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view wx:else>
+        暂无评论
+      </view>
+      <button bindtap="modalinput" class='submitBtn'>评论</button>
+      <modal hidden="{{hiddenmodalput}}" title="请输入内容" confirm-text="提交" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
+        <input type='textarea' placeholder="请输入内容" bindinput="ContentInput" />
+      </modal>
+    </view>
+  </block>
+</view>

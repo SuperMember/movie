@@ -1,0 +1,19 @@
+<view class="comment">
+  <view class='list' wx:if="{{comments.length!=0}}">
+    <view class="item" wx:for="{{comments}}" wx:key="id">
+      <navigator url="../../item/item?id={{ item.movieid }}">
+        <image class="poster" src="{{url}}" />
+        <view class="metas">
+          <text class="title">{{ item.username }} 对 {{item.moviename}} 发表评论</text>
+          <text class="sub-title">{{ item.moviecontent }}</text>
+          <view class="artists">
+            <text>{{ item.created }}</text>
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <view wx:else>
+    暂无评论
+  </view>
+</view>

@@ -1,0 +1,60 @@
+.slide swiper {
+  height: 480rpx;
+}
+.slide swiper image {
+    height: 100%;
+    width: 100%;
+  }
+.board {
+  box-sizing: border-box;
+  background-color: #f6f6f6;
+}
+
+.board-item {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  font-size: 15px;
+  margin: 30rpx 0;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.board-item .content{
+  height: 300px;
+}
+.board-item .content .inner{
+      display: flex;
+      flex-direction: row;
+      height: 300px;
+      width: 900px;
+}
+.board-item .content .inner .movie-item{
+      display: flex;
+      flex-direction: column;
+      width: 180px;
+      margin: 10px;
+}
+.board-item .content .inner .movie-item text{
+      text-align: center;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+}
+.board-item .content .inner .movie-item image{
+      width: 180rpx;
+      height: 250rpx;
+}
+.board-item .title{
+    display: flex;
+    margin-bottom: 10px;
+    width: 100%;
+} 
+.board-item .title text{
+    flex: 1;
+}
+.board-item .title image{
+    height: 15px;
+    width: 15px;
+}
+

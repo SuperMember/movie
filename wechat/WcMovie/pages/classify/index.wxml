@@ -1,0 +1,35 @@
+<view class="container">
+  <view class="nav_left">
+    <block wx:for="{{navLeftItems}}" wx:key="tag">
+      <view class="nav_left_items {{curNav == item.id ? 'active' : ''}}" bindtap="switchRightTab" data-index="{{index}}" data-id="{{item.id}}" data-tag="{{item.tag}}">{{item.tag}}</view>
+    </block>
+  </view>
+  <view class="nav_right">
+    <view wx:if="{{navRightItems.subjects.length!=0}}">
+      <block wx:for="{{navRightItems.subjects}}" wx:key="subjects">
+        <view class="nav_right_items">
+          <navigator url="../item/item?id={{item.id}}">
+            <view>
+              <block wx:if="{{item.images.large}}">
+                <image src="{{item.images.large}}"></image>
+              </block>
+              <block wx:else>
+                <image src="http://temp.im/50x30"></image>
+              </block>
+            </view>
+            <view wx:if="{{item.title}}">
+              <text>{{item.title}}</text>
+            </view>
+            <view wx:else>
+              <text>{{item.tree.desc2}}</text>
+            </view>
+          </navigator>
+        </view>
+      </block>
+    </view>
+    <view wx:else>暂无数据</view>
+  </view>
+  <loading hidden="{{loadingHidden}}">
+        加载中...
+  </loading>
+</view>
